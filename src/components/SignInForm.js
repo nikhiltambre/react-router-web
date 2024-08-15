@@ -56,16 +56,6 @@ const SignInForm = ({setIsLoggedIn}) => {
         </label>
         
         <button>Sign In</button>
-
-
-
-
-
-
-
-
-
-
     </form>
   )
 }
