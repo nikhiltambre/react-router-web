@@ -21,10 +21,17 @@ const SignUpForm = ({setIsLoggedIn}) => {
  }
   function submitHandler(event){
     event.preventDefault();
+    if(FormData.password != FormData.confirmPassword){
+      toast.error("passwords not match");
+      console.log("not match")
+      return;
+    }
+  
     setIsLoggedIn(true);
-    toast.success("loged in successfully")
-    navigate("/dashboard")
-
+    toast.success("Create Account Succesfull");
+    navigate("/dashboard");
+    console.log(FormData);
+   
      
   }
 
@@ -107,7 +114,7 @@ const SignUpForm = ({setIsLoggedIn}) => {
             </span>
           
           </label>
-          <button className=' bg-pink-300'>Sign Up</button>
+          <button className=' bg-pink-300'>Create Account</button>
        </form>
        
     </div>
